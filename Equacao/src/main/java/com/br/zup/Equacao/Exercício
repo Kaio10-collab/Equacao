@@ -1,0 +1,16 @@
+                                   //Exercício 1 - Kaio Sanches de Moraes
+
+1) O que é e pra que ser uma API?
+É uma interface de programação que permite a comunicação entre a aplicação e o usuário.
+Para que possamos interligar um ao outro.
+
+2) Quais as responsabilidades de uma Controller?
+Serve para atribuimos as funções e entendemos o que precisa ser feito. È o intermediário entre os atributos -
+- definidos em um classe model com a validação do service.
+
+3) Quais as responsabilidades de uma Service?
+É feito para validar o que foi atribuido dentro do controller e retorna essa resposta.
+
+4) Construa uma API REST que ao receber os coeficientes de uma equação do 2º grau, valide se é possível calcular -
+ - as raízes e retorne os valores de x1 e x2 para o usuário.
+ax² + bx + c = 0 é uma equação do 2° grau
