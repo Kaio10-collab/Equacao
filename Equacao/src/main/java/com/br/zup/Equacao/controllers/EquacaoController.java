@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
-
 @RestController
 @RequestMapping("equacao/")
 public class EquacaoController {
@@ -15,7 +14,7 @@ public class EquacaoController {
     public EquacaoService equacaoService;
 
     @PostMapping
-    public String calcularEquacao(@RequestBody @Valid CoeficientesEquacao grau){
-        return grau.toString();
+    public String CoeficientesEquacao (@RequestBody @Valid CoeficientesEquacao grau){
+        return equacaoService.calcularEquacao(grau);
     }
 }
