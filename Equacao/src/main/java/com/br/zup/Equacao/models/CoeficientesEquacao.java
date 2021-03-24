@@ -5,11 +5,11 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public class CoeficientesEquacao {
-    @NotBlank
+    @NotNull
     private BigDecimal a;
-    @NotBlank
+    @NotNull
     private BigDecimal b;
-    @NotBlank
+    @NotNull
     private BigDecimal c;
 
     public CoeficientesEquacao(@NotNull BigDecimal a, @NotNull BigDecimal b, @NotNull BigDecimal c){
