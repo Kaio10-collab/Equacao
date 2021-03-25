@@ -9,7 +9,7 @@ import java.math.MathContext;
 @Service
 public class EquacaoService {
 
-    public String calcularEquacao(CoeficientesEquacao grau) {
+    public SaidaEquacaoDTO calcularEquacao(CoeficientesEquacao grau) {
         MathContext mc = new MathContext(10);
 
         BigDecimal delta = grau.getB().multiply(grau.getB()).subtract(new BigDecimal(4).multiply(grau.getA()).multiply(grau.getB()));
@@ -18,8 +18,11 @@ public class EquacaoService {
         BigDecimal x1 = (grau.getB().multiply(new BigDecimal(-1).add(raizQuadradaDelta))).divide(divisor);
         BigDecimal x2 = (grau.getB().multiply(new BigDecimal(-1).subtract(raizQuadradaDelta))).divide(divisor);
 
-        SaidaEquacaoDTO ObjEquacao = new SaidaEquacaoDTO();
-        return calcularEquacao(grau);
+        SaidaEquacaoDTO objEquacao = new SaidaEquacaoDTO();
 
+        objEquacao.setX1(x1);
+        objEquacao.setX2(x2);
+
+        return objEquacao;
     }
 }

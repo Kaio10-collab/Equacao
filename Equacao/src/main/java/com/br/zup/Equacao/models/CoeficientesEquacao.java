@@ -4,6 +4,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public class CoeficientesEquacao {
+
     @NotNull
     private BigDecimal a;
     @NotNull
